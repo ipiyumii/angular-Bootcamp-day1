@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { HeaderComponent } from './header/header.component';
-import { UserComponent } from './user/user.component';
 import { TaskListComponent } from './task-list/task-list.component';
+import { DUMMY_ITEMS } from '../dummy-items';
 
 
 
@@ -12,4 +12,6 @@ import { TaskListComponent } from './task-list/task-list.component';
   templateUrl: './app.component.html',
   styleUrl: './app.component.css',
 })
-export class AppComponent {}
+export class AppComponent {
+  dummy_items = DUMMY_ITEMS;
+}

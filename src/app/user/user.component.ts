@@ -1,5 +1,4 @@
 import { Component } from '@angular/core';
-import { DUMMY_ITEMS } from '../../dummy-items';
 
 @Component({
   selector: 'app-user',
