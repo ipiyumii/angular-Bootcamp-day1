@@ -1,0 +1,18 @@
+<div class="add-task">
+    <dialog open>
+        <h2>Add New Task</h2>
+        <form (ngSubmit)="addTask()" #form = "ngForm" class="add-task-form"> 
+            <label for="taskTitle">Task Title</label>
+            <input type="text" placeholder="taskTitle" [(ngModel)]="enteredTitle" name="taskTitle" id="taskTitle" required>
+
+            <label for="taskDescription">Task Description</label>
+            <textarea placeholder="taskDescription" [(ngModel)]="enteredDescription" name="taskDescription" id="taskDescription" required></textarea>
+
+            <p class="actions">
+                <button type="button" (click)="onCancel()">Cancel</button>
+                <button type="submit">Add Task</button>
+            </p>
+        </form>
+            
+    </dialog>
+</div>

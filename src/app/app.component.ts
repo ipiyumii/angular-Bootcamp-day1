@@ -1,17 +1,17 @@
 import { Component } from '@angular/core';
 import { HeaderComponent } from './header/header.component';
-import { TaskListComponent } from './task-list/task-list.component';
-import { DUMMY_ITEMS } from '../dummy-items';
+import { TaskListComponent } from './Tasks/task-list/task-list.component';
+import { CardComponent } from './card/card.component';
+import { ContainerComponent } from './container/container.component';
 
 
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [TaskListComponent],
+  imports: [ContainerComponent, HeaderComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css',
 })
 export class AppComponent {
-  dummy_items = DUMMY_ITEMS;
 }

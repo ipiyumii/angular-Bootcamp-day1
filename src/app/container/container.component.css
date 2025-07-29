@@ -1,0 +1,41 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    color: wheat;
+    width:70%;
+    margin: 0 auto 2rem auto;
+
+    max-width: 40rem;
+    margin-bottom: 20px;
+     background: linear-gradient(
+      to bottom,
+        #334152
+
+    );
+    gap: 1rem;
+    padding: 1rem;
+    box-shadow: 0 1px 8px rgba(0, 0, 0, 0.6);
+
+    border-radius: 8px;
+}
+
+  menu button {
+    font: inherit;
+    cursor: pointer;
+    background-color: #4682B4;
+    border-radius: 4px;
+    border: none;
+    padding: 0.35rem 0.8rem;
+    font-size: 0.9rem;
+  }
+  
+  menu button:hover,
+  menu button:active {
+    background-color: #483D8B
+  }
+
+.top-bar {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}

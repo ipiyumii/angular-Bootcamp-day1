@@ -1,0 +1,27 @@
+.header{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    color: wheat;
+    width: 90%;
+    margin: 0 auto 2rem auto;
+
+    max-width: 50rem;
+    margin-bottom: 20px;
+     background: linear-gradient(
+      to bottom,
+      #5b54be,
+      #350d80
+    );
+    gap: 1rem;
+    padding: 1rem;
+    box-shadow: 0 1px 8px rgba(0, 0, 0, 0.6);
+
+    border-radius: 8px;
+}
+
+h1 {
+    font-size: 2rem;
+    color: wheat;
+}

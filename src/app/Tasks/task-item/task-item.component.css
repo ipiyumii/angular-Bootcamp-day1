@@ -3,9 +3,10 @@
   align-items: center;
   gap: 12px;
   padding: 10px 12px;
-  background-color: #f4f4f4;
+  background-color: #1f2741;
   border-radius: 8px;
-  color: black;
+  max-width: 40%;
+  
 }
 
 .status {
@@ -27,9 +28,5 @@
 
 .name {
   font-size: 16px;
-}
-
-.completed {
-  text-decoration: line-through;
-  color: #888;
+  color: whitesmoke;
 }
