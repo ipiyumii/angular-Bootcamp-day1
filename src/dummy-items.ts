@@ -13,7 +13,7 @@ export const DUMMY_ITEMS = [
   },
   {
     id: 'i4',
-    name: 'send Email to Manager',
+    name: 'send Email ',
   },
   {
     id: 'i5',
