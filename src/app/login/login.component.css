@@ -1,0 +1,75 @@
+.page {
+    display: grid;
+    place-items: center;
+}
+.container {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 26rem;        
+    min-height: 28rem;   
+    margin: 0 auto;
+    justify-content: center; 
+    gap: 1rem;
+    padding: 2rem;         
+    box-sizing: border-box;
+
+    background: linear-gradient(to bottom, #252d36);
+    box-shadow: 0 1px 12px rgba(0, 0, 0, 0.6);
+    border-radius: 12px;
+}
+
+h2 {
+    text-align: center;
+    margin-bottom: 1rem;
+    font-weight: bold;
+}
+
+input {
+
+     width: 100%;          
+    padding: 0.5rem 0.75rem;
+    border-radius: 6px;
+    border: none;
+    outline: none;
+    box-sizing: border-box;
+
+}
+
+
+label {
+  display: block;
+  font-weight: bold;
+  font-size: 0.9rem;
+  color: whitesmoke;
+  margin-bottom: 6px;
+  margin-top: 15px;
+}
+
+
+button {
+    width: 100%;
+    margin-top: 3rem;
+    cursor: pointer;
+    padding: 0.5rem 0.75rem;
+    border-radius: 6px;
+    border: none;
+    outline: none;
+    box-sizing: border-box;
+
+}
+
+.action{
+     display: flex;
+justify-content: flex-end; 
+  gap: 0.75rem;
+  margin-top: 0.5rem;}
+
+
+button[type = "submit"] {
+    background-color: rgb(40, 80, 167);
+      box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+      color: whitesmoke;
+}
+
+

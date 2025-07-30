@@ -6,7 +6,7 @@
     margin: 0 auto 2rem auto;
 
     max-width: 40rem;
-    margin-bottom: 20px;
+    /* margin-bottom: 20px; */
      background: linear-gradient(
       to bottom,
         #334152
@@ -16,7 +16,14 @@
     padding: 1rem;
     box-shadow: 0 1px 8px rgba(0, 0, 0, 0.6);
 
+    box-sizing: border-box;
     border-radius: 8px;
+}
+
+.content {
+  display: flex;
+  align-items: stretch;
+  gap: 1rem;
 }
 
   menu button {
@@ -27,6 +34,7 @@
     border: none;
     padding: 0.35rem 0.8rem;
     font-size: 0.9rem;
+    color: whitesmoke;
   }
   
   menu button:hover,
@@ -38,4 +46,43 @@
   display: flex;
   justify-content: flex-end;
   align-items: center;
+}
+/* 
+.description {
+   display: flex;
+    min-width: 0;
+    display: flex; 
+    height: 250px;
+    margin: 0;
+    padding: 1rem;
+    background-color: #4682B4;
+    border-radius: 8px;
+    box-shadow: 0 1px 8px rgba(0, 0, 0, 0.2);
+} */
+
+.task-list {
+  flex: 0 0 360px;        
+  min-width: 280px;     
+  overflow: hidden;        
+  display: flex;
+  flex-direction: column;
+  
+}
+
+
+
+.top-bar {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+
+.task-list,
+.description {
+  flex: 1 1 0;    
+  min-height: 0;
+  min-width: 0;   
+  display: flex;  
+  flex-direction: column;
 }
