@@ -1,5 +1,9 @@
-import { Injectable } from '@angular/core';
+import { inject, Injectable, signal } from '@angular/core';
 import { Task } from '../_models/task';
+import { HttpClient } from '@angular/common/http';
+import { environment } from '../../environments/environment.development';
+import { User } from '../_models/user';
+import { map } from 'rxjs/operators';
 
 @Injectable({
   providedIn: 'root'
@@ -8,6 +12,10 @@ export class TaskService {
   isTaskClicked = false;
   taskId = '';
   taskDescription = '';
+  http = inject(HttpClient)
+  baseUrl = environment.apiUrl;
+
+  isNewTaskAdded = signal(false);
 
   private taskArray = [
       {
@@ -46,13 +54,17 @@ export class TaskService {
     return this.taskArray;
   }
 
+  // addTask(task: Task) {
+  //   this.taskArray.push({
+  //     userId: task.userId, // ***********************
+  //     id: task.id,
+  //     title: task.title,
+  //     description: task.description
+  //   })
+  // }
+
   addTask(task: Task) {
-    this.taskArray.push({
-      userId: task.userId, // *************************
-      id: task.id,
-      title: task.title,
-      description: task.description
-    })
+    return this.http.post<Task[]>(this.baseUrl + 'Tasks', task);
   }
 
   onClickTask(taskId: string) {
@@ -60,4 +72,13 @@ export class TaskService {
     this.taskId = taskId;
     this.taskDescription = this.taskArray.find(task => task.id === taskId)?.description || '';
   }
+
+
+  //api****************************************8
+  getUserTasks(user: User) {
+    const userId = user.userId
+    return this.http.get<Task[]>(`${this.baseUrl}/Tasks?userId=${userId}`);
+  }
+ 
+
 }

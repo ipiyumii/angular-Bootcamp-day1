@@ -14,7 +14,7 @@
     padding: 2rem;         
     box-sizing: border-box;
 
-    background: linear-gradient(to bottom, #252d36);
+    background: linear-gradient(to bottom, #252d36, #824788 );
     box-shadow: 0 1px 12px rgba(0, 0, 0, 0.6);
     border-radius: 12px;
 }
@@ -60,16 +60,22 @@ button {
 }
 
 .action{
-     display: flex;
-justify-content: flex-end; 
+    display: flex;
+  justify-content: flex-end; 
   gap: 0.75rem;
   margin-top: 0.5rem;}
 
 
 button[type = "submit"] {
-    background-color: rgb(40, 80, 167);
+    background-color: rgb(16, 56, 143);
       box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
       color: whitesmoke;
+}
+
+button:hover {
+      background-color: rgb(54, 5, 167);
+      cursor: pointer;
+
 }
 
 

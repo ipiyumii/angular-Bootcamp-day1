@@ -16,19 +16,34 @@ export class AddTaskComponent {
   
   enteredTitle = '';
   enteredDescription = '';
+  userId = '';
 
   constructor(private taskService: TaskService, private accountService: AccountService) {}
+
+  ngOnInit() {
+    const currentUser = localStorage.getItem('currentUser');
+    if(currentUser) {
+      const user: User = JSON.parse(currentUser);
+      this.userId = user.userId;
+    }
+  }
 
 
   addTask() {
     this.taskService.addTask({
-      userId: this.accountService.currentUser()?.userId || '',
+      userId: this.userId,
       id: Math.random().toString(),
       title: this.enteredTitle,
       description: this.enteredDescription
+    }).subscribe({
+      next: (response) => {
+        console.log("task added");
+        this.taskService.isNewTaskAdded.set(true);
+        this.isLoading.emit(false);
+      },
+      error: error => console.log("error adding tasks")
     })
 
-    this.isLoading.emit(false);
   }
 
   onCancel() {

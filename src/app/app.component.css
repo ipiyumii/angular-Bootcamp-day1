@@ -1,16 +1,27 @@
+html, body {
+  height: 100%;
+  margin: 0;
+}
+
 header {
   margin: 3rem auto;
   text-align: center;
 }
 
-img {
-  width: 8rem;
+
+.main {
+  min-height: 100vh;
+  background-image: url(../assets/images/image.png);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 }
+
+
 
 h1 {
   margin: 1rem auto;
   background: -webkit-linear-gradient(45deg, #f9096d, #b700ff);
-  -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   font-size: 3rem;
 }

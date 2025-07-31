@@ -1,0 +1,78 @@
+{
+  "Users": [
+    {
+      "userId": "u1",
+      "name": "Piyumi",
+      "email": "piyumi@gmail.com",
+      "password": "piyumi123",
+      "age": 25,
+      "id": "72f5"
+    },
+    {
+      "userId": "u2",
+      "name": "John",
+      "email": "john@gmial.com",
+      "password": "john123",
+      "age": 30,
+      "id": "6aee"
+    },
+    {
+      "userId": "u3",
+      "name": "Jane",
+      "email": "jane@gmail.com",
+      "password": "jane123",
+      "age": 28,
+      "id": "29f8"
+    }
+  ],
+  "Tasks": [
+    {
+      "id": "i1",
+      "userId": "u1",
+      "title": "Buy Groceries",
+      "description": "Buy milk, bread, and eggs from the supermarket."
+    },
+    {
+      "id": "i2",
+      "userId": "u2",
+      "title": "finish Project Report",
+      "description": "Complete the project report by the end of the week."
+    },
+    {
+      "id": "i3",
+      "userId": "u2",
+      "title": "finish Angular Course",
+      "description": "Complete the Angular course on Udemy."
+    },
+    {
+      "id": "i4",
+      "userId": "u1",
+      "title": "send Email ",
+      "description": "Send the project update email to the team."
+    },
+    {
+      "id": "i5",
+      "userId": "u3",
+      "title": "go to the Gym",
+      "description": "Attend the evening gym session for a workout."
+    },
+    {
+      "id": "0.19312026085858403",
+      "userId": "u1",
+      "title": "test title",
+      "description": "dfdsfs"
+    },
+    {
+      "id": "0.39109132088760445",
+      "userId": "u1",
+      "title": "test title",
+      "description": "dddd"
+    },
+    {
+      "id": "0.6692158816486325",
+      "userId": "u1",
+      "title": "test title",
+      "description": "fdfd"
+    }
+  ]
+}

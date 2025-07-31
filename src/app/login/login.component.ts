@@ -28,10 +28,15 @@ export class LoginComponent {
   }
 
   onSubmit() {
-    this.accountService.login(
+    if(this.loginForm.valid) {
+      this.accountService.login(
       this.loginForm.value.email, 
       this.loginForm.value.password
     );
     this.router.navigate(['/tasks']);
+    }
+    
+
+    
   }
 }
