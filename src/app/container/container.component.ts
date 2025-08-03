@@ -32,7 +32,7 @@ export class ContainerComponent {
   }
 
   ngOnInit() {
-    this.isTaskClicked = this.taskService.isTaskClicked;
+    // this.isTaskClicked = this.taskService.isTaskClicked;
 
       const currentUser = localStorage.getItem('currentUser');
     if (currentUser) {

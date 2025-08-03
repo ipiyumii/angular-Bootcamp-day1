@@ -20,30 +20,6 @@ export class AccountService {
 
   constructor() { }
 
-  private userArray = [
-      {  
-        userId: 'u1', 
-        name: 'Piyumi',
-        email: 'piyumi@gmail.com',
-        password: 'piyumi123',
-        age: 25
-      },
-      {
-        userId: 'u2',
-        name: 'John',
-        email: 'john@gmial.com',
-        password: 'john123',
-        age: 30
-      },
-      {
-        userId: 'u3',
-        name: 'Jane',
-        email: 'jane@gmail.com',
-        password: 'jane123',
-        age: 28
-      },
-  ];
-
   // login(email: string, password: string)  {
   //   this.email = email;
   //   this.password = password;
@@ -66,6 +42,8 @@ export class AccountService {
 
         if(matcheduser) {
           this.currentUser.set(matcheduser); 
+          localStorage.setItem('currentUser', JSON.stringify(matcheduser));
+
         }
       }
     )

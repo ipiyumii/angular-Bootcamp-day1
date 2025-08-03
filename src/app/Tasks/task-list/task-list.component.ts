@@ -2,6 +2,7 @@ import { Component, effect, Input } from '@angular/core';
 import { TaskItemComponent } from '../task-item/task-item.component';
 import { TaskService } from '../../_services/task.service';
 import { CardComponent } from '../../card/card.component';
+import { AccountService } from '../../_services/account.service';
 
 @Component({
   selector: 'app-task-list',
@@ -15,7 +16,7 @@ export class TaskListComponent {
     dummy_items: any[] = [];
     currentUser: any;
 
-    constructor(private taskService: TaskService) {
+    constructor(private taskService: TaskService,  private accountService: AccountService) {
       effect(() => {
         const newTask = taskService.isNewTaskAdded();
         if(newTask) {
@@ -26,22 +27,28 @@ export class TaskListComponent {
     }
 
     ngOnInit() {
-      this.dummy_items = this.taskService.dummy_tasks;
+      // this.dummy_items = this.taskService.dummy_tasks;
 
 
-      this.currentUser = localStorage.getItem('currentUser');
-      if (this.currentUser) {
-        const user = JSON.parse(this.currentUser);
-        this.dummy_items = this.dummy_items.filter(item => item.userId === user.userId);
+      const currentUser = localStorage.getItem('currentUser');
+      // const currentUser = this.accountService.currentUser();
+      if (currentUser) {
+        this.currentUser = JSON.parse(currentUser);
+        // this.dummy_items = this.dummy_items.filter(item => item.userId === user.userId);
+        this.getUserTask();
       }
 
-      // this.getUserTask();
+      
     }
 
     getUserTask(){
-      this.taskService.getUserTasks(this.currentUser).subscribe({
+      this.taskService.getUserTasks().subscribe({
         next: (response) => {
-          this.dummy_items = response;
+          const dummy_items = response;
+
+          if(dummy_items) { 
+            this.dummy_items = dummy_items.filter(item => item.userId === this.currentUser.userId);
+          }
           
         },
         error: error => console.log("error getting tasks")

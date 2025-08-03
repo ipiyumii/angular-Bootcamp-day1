@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, Input, Signal, signal } from '@angular/core';
 import { TaskItemComponent } from '../Tasks/task-item/task-item.component';
 import { TaskService } from '../_services/task.service';
 
@@ -11,12 +11,17 @@ import { TaskService } from '../_services/task.service';
 })
 export class CardComponent {
     @Input() item: any;
-    isClicked = false;
+    // isClicked = false;
+    description = '';
 
+    clickedItem = signal<string>('');
+    
     constructor(private taskService: TaskService) {}
 
 
-    onClick() {
-        this.taskService.onClickTask(this.item.id);
+    onClickCard() {
+        this.taskService.onClickTask();
+        this.clickedItem.set(this.item.id);
+        console.log(this.clickedItem());
     }
 }
