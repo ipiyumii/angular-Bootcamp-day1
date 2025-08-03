@@ -31,17 +31,18 @@ export class TaskService {
 
   onClickTask(){
     this.isTaskClicked.set(true); 
-    this.getUserTasks().subscribe({
-      next: (response) => {
-        this.dummy_tasks.set(response);
+    console.log("clicked");
+    // this.getUserTasks().subscribe({
+    //   next: (response) => {
+    //     this.dummy_tasks.set(response);
         
         // this.taskId = taskId;
         // this.taskDescription = this.taskArray.find(task => task.id === taskId)?.description || '';
         // return this.taskDescription;
-      },
-      error: error => console.error("error logging description")
+    //   },
+    //   error: error => console.error("error logging description")
       
-    })
+    // })
     // this.isTaskClicked = true;
     // this.taskId = taskId;
     // this.taskDescription = this.taskArray.find(task => task.id === taskId)?.description || '';

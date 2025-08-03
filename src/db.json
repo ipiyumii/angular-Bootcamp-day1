@@ -4,7 +4,7 @@
       "userId": "u1",
       "name": "Piyumi",
       "email": "piyumi@gmail.com",
-      "password": "piyumi123",
+      "password": "p",
       "age": 25,
       "id": "72f5"
     },
@@ -30,73 +30,43 @@
       "id": "i1",
       "userId": "u1",
       "title": "Buy Groceries",
-      "description": "Buy milk, bread, and eggs from the supermarket."
+      "description": "Buy milk, bread, and eggs from the supermarket.",
+      "dueDate": "2025-08-03"
     },
     {
       "id": "i2",
       "userId": "u2",
       "title": "finish Project Report",
-      "description": "Complete the project report by the end of the week."
+      "description": "Complete the project report by the end of the week.",
+      "dueDate": "2025-08-03"
     },
     {
       "id": "i3",
       "userId": "u2",
       "title": "finish Angular Course",
-      "description": "Complete the Angular course on Udemy."
+      "description": "Complete the Angular course on Udemy.",
+      "dueDate": "2025-08-03"
     },
     {
       "id": "i4",
       "userId": "u1",
       "title": "send Email ",
-      "description": "Send the project update email to the team."
+      "description": "Send the project update email to the team.",
+      "dueDate": "2025-08-03"
     },
     {
       "id": "i5",
       "userId": "u3",
       "title": "go to the Gym",
-      "description": "Attend the evening gym session for a workout."
+      "description": "Attend the evening gym session for a workout.",
+      "dueDate": "2025-08-03"
     },
     {
-      "id": "0.19312026085858403",
+      "id": "0.9897886154391455",
       "userId": "u1",
-      "title": "test title",
-      "description": "dfdsfs"
-    },
-    {
-      "id": "0.39109132088760445",
-      "userId": "u1",
-      "title": "test title",
-      "description": "dddd"
-    },
-    {
-      "id": "0.6692158816486325",
-      "userId": "u1",
-      "title": "test title",
-      "description": "fdfd"
-    },
-    {
-      "id": "0.2293632670441661",
-      "userId": "u1",
-      "title": "test title",
-      "description": "hghhhh"
-    },
-    {
-      "id": "0.33346052488118016",
-      "userId": "u1",
-      "title": "test title",
-      "description": "gfgf"
-    },
-    {
-      "id": "0.20160724666177277",
-      "userId": "u1",
-      "title": "test title 3",
-      "description": ""
-    },
-    {
-      "id": "0.30602346358399923",
-      "userId": "u1",
-      "title": "test title 4",
-      "description": "sfsdf"
+      "title": "example title",
+      "description": "example desciption",
+      "dueDate": "2025-08-05"
     }
   ]
 }

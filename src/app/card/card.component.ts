@@ -14,14 +14,15 @@ export class CardComponent {
     // isClicked = false;
     description = '';
 
-    clickedItem = signal<string>('');
+    clickedItem = '';
     
     constructor(private taskService: TaskService) {}
 
 
     onClickCard() {
         this.taskService.onClickTask();
-        this.clickedItem.set(this.item.id);
-        console.log(this.clickedItem());
+        this.clickedItem = this.item.id;
+        localStorage.setItem('clickedItem', JSON.stringify(this.clickedItem));
+
     }
 }

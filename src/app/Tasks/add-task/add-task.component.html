@@ -15,6 +15,10 @@
             <label for="taskDescription">Task Description</label>
             <textarea placeholder="taskDescription" [(ngModel)]="enteredDescription" name="taskDescription" id="taskDescription" required></textarea>
 
+            <label for="date">Date</label>
+            <input type="date" id="due-date" name="due-date" [(ngModel)]="enteredDate"/>
+
+
             <p class="actions">
                 <button type="button" (click)="onCancel()">Cancel</button>
                 <button type="submit" >Add Task</button>

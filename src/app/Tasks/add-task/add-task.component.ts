@@ -16,7 +16,9 @@ export class AddTaskComponent {
   
   enteredTitle = '';
   enteredDescription = '';
+  enteredDate = '';
   userId = '';
+
 
   constructor(private taskService: TaskService, private accountService: AccountService) {}
 
@@ -34,7 +36,8 @@ export class AddTaskComponent {
       userId: this.userId,
       id: Math.random().toString(),
       title: this.enteredTitle,
-      description: this.enteredDescription
+      description: this.enteredDescription,
+      dueDate: this.enteredDate
     }).subscribe({
       next: (response) => {
         console.log("task added");

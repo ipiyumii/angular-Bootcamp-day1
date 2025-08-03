@@ -1,4 +1,4 @@
-import { Component, Output } from '@angular/core';
+import { Component, effect, ElementRef, HostListener, Output } from '@angular/core';
 import { TaskListComponent } from '../Tasks/task-list/task-list.component';
 import { AddTaskComponent } from '../Tasks/add-task/add-task.component';
 import { DescCardComponent } from '../desc-card/desc-card.component';
@@ -20,7 +20,11 @@ export class ContainerComponent {
   taskDescription = '';
   userName = '';
 
-  constructor(private taskService: TaskService, private accountService: AccountService) {}
+  constructor(private taskService: TaskService, private elementref: ElementRef) {
+    effect(() => {
+          this.isTaskClicked = this.taskService.isTaskClicked();
+    });
+  }
 
   addTask() {
     this.isLoading = true;
@@ -31,17 +35,26 @@ export class ContainerComponent {
 
   }
 
-  ngOnInit() {
+  //  @HostListener("document:click", ['$event']) 
+  //    handleOutsideClick(event: MouseEvent) {
+  //     setTimeout(() => {
+  //        if(this.elementref.nativeElement.contains(event.target)) {
+  //         this.taskService.isTaskClicked.set(false);
+  //           localStorage.removeItem('clickedItem');
+  //       }
+  //     })        
+  //    }
+
+  ngOnInit() {     
     // this.isTaskClicked = this.taskService.isTaskClicked;
 
-      const currentUser = localStorage.getItem('currentUser');
+    const currentUser = localStorage.getItem('currentUser');
     if (currentUser) {
       const user: User = JSON.parse(currentUser);
       this.userName = user.name;
     }
-   
-    if(this.isTaskClicked) {
-      this.taskDescription = this.taskService.taskDescription;
-    }
+
+    
+  
   }
 }

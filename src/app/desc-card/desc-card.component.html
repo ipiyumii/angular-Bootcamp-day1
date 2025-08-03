@@ -1,6 +1,18 @@
 <div class="container">
-    <dialog open>
-        <textarea name="description" id="description">{{description}}</textarea>
+    <dialog open class="dialog">
+        <header class="head"> 
+            <div class="title">{{title}}</div>
+
+            <p>{{dueDate | date: 'dd/MM/yyyy'}}</p>
+ 
+        </header>
+
+        <textarea name="description" id="description"> {{description}} </textarea>
+
+        <div class="btn-action">
+            <button class="close" type="button" name="close" (click) = "onClickClose()">Cancel</button>
+        </div>
+     
     </dialog>
 
 </div>
