@@ -31,3 +31,8 @@
   font-size: 16px;
   color: whitesmoke;
 }
+
+.completed-task{
+  text-decoration: line-through;
+  color: gray;
+}

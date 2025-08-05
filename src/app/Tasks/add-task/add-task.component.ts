@@ -19,7 +19,6 @@ export class AddTaskComponent {
   enteredDate = '';
   userId = '';
 
-
   constructor(private taskService: TaskService, private accountService: AccountService) {}
 
   ngOnInit() {
@@ -30,14 +29,14 @@ export class AddTaskComponent {
     }
   }
 
-
   addTask() {
     this.taskService.addTask({
       userId: this.userId,
       id: Math.random().toString(),
       title: this.enteredTitle,
       description: this.enteredDescription,
-      dueDate: this.enteredDate
+      dueDate: this.enteredDate,
+      completed: false
     }).subscribe({
       next: (response) => {
         console.log("task added");
@@ -46,7 +45,6 @@ export class AddTaskComponent {
       },
       error: error => console.log("error adding tasks")
     })
-
   }
 
   onCancel() {

@@ -1,4 +1,19 @@
 <div class="items">
-    <button class="status"></button>
-    <span class="name">{{item.title}}</span> 
+    <span class="name">
+        <mat-checkbox 
+            (click)="$event.stopPropagation()" 
+            [checked] = "item.completed"
+            (change) = "toogleComplete()"
+        >
+
+
+        @if(isComplete) {
+            <p [ngClass]="{ 'completed-task': item.completed }">{{item.title}}</p>
+        } @else {
+            {{item.title}}
+        }
+        
+            
+        </mat-checkbox>
+    </span> 
 </div>

@@ -23,5 +23,6 @@
 
 h1 {
     font-size: 2rem;
-    color: wheat;
+    color: #ffffff !important;   
+    font-weight: bolder;   
 }

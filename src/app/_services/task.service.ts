@@ -49,9 +49,13 @@ export class TaskService {
   }
 
 
-  //api****************************************8
+ 
   getUserTasks() {
     return this.http.get<Task[]>(this.baseUrl + 'Tasks');
+  }
+
+  updateTask() {
+    return this.http.put<Task[]>(this.baseUrl + 'Tasks', localStorage.getItem('clickedItem'));
   }
  
 

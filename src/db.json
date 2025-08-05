@@ -4,7 +4,7 @@
       "userId": "u1",
       "name": "Piyumi",
       "email": "piyumi@gmail.com",
-      "password": "p",
+      "password": "piyumi123",
       "age": 25,
       "id": "72f5"
     },
@@ -31,42 +31,48 @@
       "userId": "u1",
       "title": "Buy Groceries",
       "description": "Buy milk, bread, and eggs from the supermarket.",
-      "dueDate": "2025-08-03"
+      "dueDate": "2025-08-03",
+      "completed": "false"
     },
     {
       "id": "i2",
       "userId": "u2",
       "title": "finish Project Report",
       "description": "Complete the project report by the end of the week.",
-      "dueDate": "2025-08-03"
+      "dueDate": "2025-08-03",
+      "completed": "false"
     },
     {
       "id": "i3",
       "userId": "u2",
       "title": "finish Angular Course",
       "description": "Complete the Angular course on Udemy.",
-      "dueDate": "2025-08-03"
+      "dueDate": "2025-08-03",
+      "completed": "false"
     },
     {
       "id": "i4",
       "userId": "u1",
       "title": "send Email ",
       "description": "Send the project update email to the team.",
-      "dueDate": "2025-08-03"
+      "dueDate": "2025-08-03",
+      "completed": "false"
     },
     {
       "id": "i5",
       "userId": "u3",
       "title": "go to the Gym",
       "description": "Attend the evening gym session for a workout.",
-      "dueDate": "2025-08-03"
+      "dueDate": "2025-08-03",
+      "completed": "false"
     },
     {
       "id": "0.9897886154391455",
       "userId": "u1",
       "title": "example title",
       "description": "example desciption",
-      "dueDate": "2025-08-05"
+      "dueDate": "2025-08-05",
+      "completed": "false"
     }
   ]
 }

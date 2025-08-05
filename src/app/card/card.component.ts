@@ -20,9 +20,8 @@ export class CardComponent {
 
 
     onClickCard() {
-        this.taskService.onClickTask();
-        this.clickedItem = this.item.id;
-        localStorage.setItem('clickedItem', JSON.stringify(this.clickedItem));
-
+      this.taskService.onClickTask();
+      this.clickedItem = this.item.id;
+      localStorage.setItem('clickedItem', JSON.stringify(this.clickedItem));
     }
 }

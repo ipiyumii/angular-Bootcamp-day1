@@ -14,7 +14,7 @@
     padding: 2rem;         
     box-sizing: border-box;
 
-    background: linear-gradient(to bottom, #252d36, #824788 );
+    background: linear-gradient(to bottom,#c883cf, #275a94 );
     box-shadow: 0 1px 12px rgba(0, 0, 0, 0.6);
     border-radius: 12px;
 }
@@ -22,12 +22,14 @@
 h2 {
     text-align: center;
     margin-bottom: 1rem;
-    font-weight: bold;
+    font-weight: bolder;
+    font-size: 2.4rem;
+    color: #ffffff;
 }
 
-input {
+/* input {
 
-     width: 100%;          
+    width: 100%;          
     padding: 0.5rem 0.75rem;
     border-radius: 6px;
     border: none;
@@ -44,7 +46,7 @@ label {
   color: whitesmoke;
   margin-bottom: 6px;
   margin-top: 15px;
-}
+} */
 
 
 button {
@@ -67,15 +69,51 @@ button {
 
 
 button[type = "submit"] {
-    background-color: rgb(16, 56, 143);
+    background-color: rgb(27, 16, 54);
       box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
-      color: whitesmoke;
+      color: #ffffff;
 }
 
 button:hover {
-      background-color: rgb(54, 5, 167);
+      background-color: rgb(29, 2, 92);
       cursor: pointer;
 
 }
 
 
+mat-form-field.custom-form-field {
+  width: 100%;
+  margin-top: 15px;
+   height: 4.5rem
+}
+
+mat-form-field.custom-form-field .mat-form-field-flex {
+  border-radius: 6px;
+  padding: 0 0.5rem;
+}
+
+
+mat-form-field.custom-form-field .mat-form-field-infix {
+  color: black;
+}
+
+input.mat-input-element {
+  color: #222;                 
+  caret-color: black;
+   
+}
+
+.mat-form-field-label {
+  color: #ffffff !important;
+  
+        
+}
+
+.mat-form-field.mat-focused .mat-form-field-label {
+  color: #000 !important;        
+}
+
+mat-error {
+  color: #d31a1a;
+  font-size: 0.8rem;
+}

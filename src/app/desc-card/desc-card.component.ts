@@ -12,7 +12,9 @@ import { CommonModule } from '@angular/common';
 })
 export class DescCardComponent {
   constructor(private taskService: TaskService, private elementref: ElementRef) {}
+
   // @Input() taskDescription: string = '';
+
   tasks: any[] = [];
   description = '';
   clickedItem = '';
@@ -21,17 +23,14 @@ export class DescCardComponent {
 
   ngOnInit() {
     // this.tasks = this.taskService.dummy_tasks;
-
+    
     const clickedItem = localStorage.getItem('clickedItem');
       // const currentUser = this.accountService.currentUser();
       if (clickedItem) {
         this.clickedItem = JSON.parse(clickedItem);
         this.getUserTask();
-      }
-      
+      }  
   }
-
-    
 
   getUserTask() {
     this.taskService.getUserTasks().subscribe({
@@ -46,8 +45,7 @@ export class DescCardComponent {
           this.dueDate = foundTask ? foundTask.dueDate: '';
           console.log(this.dueDate);
           
-        }
-          
+        }   
       }
     })
   }
@@ -55,5 +53,11 @@ export class DescCardComponent {
   onClickClose() {
     this.taskService.isTaskClicked.set(false);
     localStorage.removeItem('clickedItem');
+  }
+
+  @HostListener('document:keydown.enter', ['$event'])
+  onEnterPress(event: KeyboardEvent): void {
+    console.log('Enter key pressed!', event);
+    // Add your custom logic here
   }
 }

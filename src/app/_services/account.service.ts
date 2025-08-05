@@ -17,6 +17,7 @@ export class AccountService {
   email: string = '';
   password: string = '';
   currentUser = signal<User | null>(null);
+  errorMessage = signal(false);
 
   constructor() { }
 
@@ -42,8 +43,12 @@ export class AccountService {
 
         if(matcheduser) {
           this.currentUser.set(matcheduser); 
-          localStorage.setItem('currentUser', JSON.stringify(matcheduser));
+          this.router.navigate(['/tasks']);
 
+          localStorage.setItem('currentUser', JSON.stringify(matcheduser));
+        }
+        else {
+          this.errorMessage.set(true);
         }
       }
     )

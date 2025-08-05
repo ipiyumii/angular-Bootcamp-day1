@@ -28,17 +28,13 @@ export class TaskListComponent {
 
     ngOnInit() {
       // this.dummy_items = this.taskService.dummy_tasks;
-
-
       const currentUser = localStorage.getItem('currentUser');
       // const currentUser = this.accountService.currentUser();
       if (currentUser) {
         this.currentUser = JSON.parse(currentUser);
         // this.dummy_items = this.dummy_items.filter(item => item.userId === user.userId);
         this.getUserTask();
-      }
-
-      
+      }      
     }
 
     getUserTask(){
@@ -54,6 +50,5 @@ export class TaskListComponent {
         error: error => console.log("error getting tasks")
       })
     }
-
 }
 

@@ -3,31 +3,48 @@
         <h2>USER LOGIN</h2>
 
     <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
-        <label for="email">E-MAIL</label>
+        <mat-form-field appearance="fill" class="custom-form-field">
+             <mat-label>Email</mat-label>
+
+        <!-- <label for="email">E-MAIL</label> -->
         <input 
+        matInput
             type="email" 
             id="email" 
             name="email" 
             class="FormControl"
             formControlName ="email" 
             placeholder="Enter your email"
+            (blur)="updateErrorMessage()"
             required
         >
+        @if(email.invalid) {
+            <mat-error>{{errorMessage()}}</mat-error>
+        }
+</mat-form-field>
 
-        <label for="password">PASSWORD</label>
+    <mat-form-field appearance="fill" class="custom-form-field">
+        <mat-label>Password</mat-label>
         <input 
+        matInput
             type="password" 
             id="password" 
             name="password" 
             class="FormControl" 
-            formControlName="password" 
+            formControlName = "password" 
             placeholder="Enter your password"
+            (blur)="updateErrorMessage()"
             required
         >
+         @if(password.invalid) {
+            <mat-error>{{errorMessage()}}</mat-error>
+        }
+    </mat-form-field>
 
         <div class="action">
             <button type="submit" class="btn">LOGIN</button>
         </div>
+    
     </form>
 
    
