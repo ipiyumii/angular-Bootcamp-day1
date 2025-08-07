@@ -51,10 +51,21 @@ export class AccountService {
           this.errorMessage.set(true);
         }
       }
-    )
-
-    
-    
+    )  
   }
 
+  register(user: User) {
+    return this.http.post<User[]>(this.baseUrl + 'Users', user).subscribe( {
+        next: (response) => {
+          this.currentUser.set(user);
+          localStorage.setItem('currentUser', JSON.stringify(user));
+          this.router.navigate(['/tasks']);
+        },
+
+        error:(error) => {
+          alert("error");
+        }
+    }
+    )
+  }
 }

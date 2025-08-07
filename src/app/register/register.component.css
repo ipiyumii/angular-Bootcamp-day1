@@ -64,13 +64,13 @@ button {
 .action{
   display: flex;
   justify-content: flex-end; 
-  gap: 0.75rem;
 }
 
 button[type = "submit"] {
     background-color: rgb(27, 16, 54);
     box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
     color: #ffffff;
+    margin-top: 2px;
 }
 
 button:hover {
@@ -99,12 +99,13 @@ mat-form-field.custom-form-field .mat-form-field-infix {
 input.mat-input-element {
   color: #222;                 
   caret-color: black;
+  font-size: 1rem;
    
 }
 
 .mat-form-field-label {
   color: #ffffff !important;
-  
+font-size: 1px;
         
 }
 
@@ -125,18 +126,4 @@ mat-error {
 
 a {
   margin-left: 5px;
-}
-
-.link-button {
-  background: none;
-  border: none;
-  text-decoration: underline;
-  color: blue;
-  font: inherit;
-  padding: 0;
-}
-
-.link-button, a :hover {
-  cursor: pointer;
-  color: darkblue;
 }

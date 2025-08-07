@@ -1,0 +1,104 @@
+<div class="page">
+<div class="container">
+        <h2>USER REGISTER</h2>
+
+    <form [formGroup]="registerForm" (ngSubmit)="onSubmit()">
+
+        <mat-form-field appearance="fill" class="custom-form-field">
+            <mat-label>Name</mat-label>
+
+            <input 
+                matInput
+                type="text" 
+                id="name" 
+                name="name" 
+                class="FormControl"
+                formControlName ="name" 
+                placeholder="Enter your name"
+                (blur)="updateErrorMessage()"
+                required
+            >
+        
+        </mat-form-field>
+
+          <mat-form-field appearance="fill" class="custom-form-field">
+            <mat-label>Age</mat-label>
+
+            <input 
+                matInput
+                type="number" 
+                id="age" 
+                name="nageame" 
+                class="FormControl"
+                formControlName ="age" 
+                placeholder="Enter your age"
+                (blur)="updateErrorMessage()"
+                required
+            >
+        </mat-form-field>
+
+        
+
+        <mat-form-field appearance="fill" class="custom-form-field">
+            <mat-label>Email</mat-label>
+
+            <input 
+            matInput
+                type="email" 
+                id="email" 
+                name="email" 
+                class="FormControl"
+                formControlName ="email" 
+                placeholder="Enter your email"
+                (blur)="updateErrorMessage()"
+                required
+            >
+            @if(email.invalid) {
+                <mat-error>{{errorMessage}}</mat-error>
+            }
+        </mat-form-field>
+
+        <mat-form-field appearance="fill" class="custom-form-field">
+            <mat-label>Password</mat-label>
+            <input 
+            matInput
+                type="password" 
+                id="password" 
+                name="password" 
+                class="FormControl" 
+                formControlName = "password" 
+                placeholder="Enter your password"
+                (blur)="updateErrorMessage()"
+                required
+            >
+            <!-- @if(password.invalid) {
+                <mat-error>{{errorMessage()}}</mat-error>
+            } -->
+        </mat-form-field>
+
+         <mat-form-field appearance="fill" class="custom-form-field">
+            <mat-label>Confirm Password</mat-label>
+
+            <input 
+            matInput
+                type="password" 
+                id="confirmpwd" 
+                name="confirmpwd" 
+                class="FormControl"
+                formControlName ="confirmpwd" 
+                placeholder="Confirm your password"
+                (blur)="updateErrorMessage()"
+                required
+            >
+
+        </mat-form-field>
+
+        <div class="action">
+            <button type="submit" class="btn">REGISTER</button>
+        </div>
+    
+    </form>
+
+   
+</div>
+</div>

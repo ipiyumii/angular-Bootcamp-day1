@@ -27,9 +27,10 @@
   outline: none;
 }
 
-.name {
+p, .name {
   font-size: 16px;
   color: whitesmoke;
+  margin-top: 5px;
 }
 
 .completed-task{

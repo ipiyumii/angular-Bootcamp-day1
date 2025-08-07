@@ -51,7 +51,7 @@ export class LoginComponent {
 
   updateErrorMessage() {
     if(this.email.hasError('required')) {
-      this.errorMessage.set("you must enter a value");
+      this.errorMessage.set("You must enter a value");
     } else if(this.email.hasError('email')) {
       this.errorMessage.set('Not a valid email');
     } else {
@@ -63,5 +63,9 @@ export class LoginComponent {
     } else if(this.accountService.errorMessage()) {
       this.errorMessage.set('email or password is not valid');
     }
+  }
+
+  onClickRegister() {
+    this.router.navigate(['/register']);
   }
 }
